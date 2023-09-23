@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tooltip.css">
+    <!-- Important Librarys -->
+    <script src="./JS/Libraries/Break_eternity.js"></script>
+    <script src="./JS/Libraries/Element.js"></script>
+    <script src="./JS/Libraries/Format.js"></script>
+    <script src="/JS/Libraries/Iconify.js"></script>
+    <script src="./JS/Libraries/HelperFuncs.js"></script>
+
+
+    <!-- Game Code -->
+    <script src="./JS/General.js"></script>
+    <script src="./JS/Buildings.js"></script>
+    <script src="./JS/Temp.js"></script>
+    <script src="./JS/Saves.js"></script>
+    <script src="./JS/Tabs.js"></script>
+    <script src="./JS/Tooltips.js"></script>
+    <script src="./JS/UpdateTabs.js"></script>
+
+    <!-- Important -->
+    <script src="./JS/Currency.js"></script>
+    <script src="./JS/Tooltips_cur.js"></script>
+    <script src="./JS/Main.js"></script>
+
+    <!-- One Offs -->
+    <script src="./JS/Scavenge.js"></script>
+
+</head>
+
+<body onload="LoadGame()">
+    <div id="tooltip-div"></div>
+    <div id="MainContainer"style="height: 100%; width: 100%;">
+        <div id="LayerSelection"></div>
+        <div id="ContentDisplay" style="width: calc(100% - 450px); height: 100%; overflow-y: auto; overflow-x: hidden; position: relative;">
+            <div style="min-height: 60px">
+                <div id="chal_upper"></div>
+            </div>
+            <div class="main-line"></div>
+            <div id="stabs_div" style="min-height: 45px;">
+                <div id="stabs"></div>
+            </div><br>
+            <div id="TabFrames">
+                <div id="tab_frame0">
+                    <div id="stab_frame0_0">
+                        <div id="ManualCurrencyGain">
+                            <div id="ButtonDiv">
+                                <button style="width: 175; height: 50;" id="Scavenge" onclick="Scavenge()">Scavenge For <span id="ManualLifeGainAmount"></span> Life Energy</button>
+                            </div>
+                        </div>
+                        <div id="LayerOneBuilds">
+                            <div id="building_life_1"></div>
+                            <div id="building_life_2"></div>
+                            <div id="building_life_3"></div>
+                            <div id="building_life_4"></div>
+                            <button style="width: 175; height: 50;" id="Save" onclick="Save()">Save</button>
+                            <button style="width: 175; height: 50;" id="Reset Buildings" onclick="RB()">Reset Buildings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CurrencyDisplay"></div>
+    </div>
+</body>

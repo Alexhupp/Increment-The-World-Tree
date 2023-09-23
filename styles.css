@@ -1,0 +1,180 @@
+:root {
+    --font: 'Verdana, Geneva, Tahoma, sans-serif';
+	--cx: 0;
+    --cy: 0;
+
+	--elem-symbol-size: 18px;
+}
+
+* {
+	font-family: var(--font);
+    table-align: center;
+	text-align: center;
+}
+
+p {
+	line-height: 0.6;
+}
+
+body {
+    color: white;
+    background-color: hsl(0, 0%, 7%);
+	overflow: hidden;
+	font-size: 14px;
+	margin: 0px;
+	user-select: none;
+}
+
+#MainContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.table_center {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+h1 {
+    display: inline;
+	font-weight: normal;
+    font-size: 35px;
+}
+
+h2 {
+	display: inline;
+	font-weight: normal;
+    font-size: 25px;
+}
+
+h3 {
+	display: inline;
+	font-weight: bold;
+    font-size: 20px;
+}
+
+h4 {
+	display: inline;
+	font-weight: bold;
+    font-size: 18px;
+}
+
+#LayerSelection > div {
+	width: 100%;
+}
+
+
+#CurrencyDisplay {
+	width: 246px;
+	height: 100%;
+	overflow-y: auto;
+	border-left: solid 2px white;
+}
+
+#CurrencyDisplay > div {
+	display: flex;
+	align-items: center;
+	margin: 3px;
+	width: calc(100% - 6px);
+	height: 45px;
+}
+
+#CurrencyDisplay > div > div {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	width: 100%;
+}
+
+#CurrencyDisplay > div > div > span {
+	font-size: 12px;
+}
+
+.main-line {
+	width: 100%;
+	border-bottom: solid 2px white;
+	height: 5px;
+	margin-bottom: 13px;
+}
+
+.res_img {
+	width: 30px;
+	height: 30px;
+}
+
+.stab_btn .btn_tab {
+	min-height: 40px;
+	font-size: 12px;
+}
+
+.btn_tab {
+	width: calc(100% - 5px);
+	min-height: 40px;
+}
+
+.btn_tab:hover {
+	background-color: #444
+}
+
+#LayerSelection {
+	width: 196px;
+	height: 100%;
+	overflow-y: auto;
+	border-right: solid 2px white;
+}
+
+#LayerSelection > div {
+	width: 100%;
+}
+
+#LayerSelection .btn_tab {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	overflow: hidden;
+}
+
+#LayerSelection .btn_tab > div {
+	width: 170px;
+	font-size: 16px;
+	text-align: left;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#LayerSelection .btn_tab > iconify-icon {
+	opacity: 0.1;
+	position: absolute;
+	bottom: -20px;
+	right: 5px;
+	transition: transform 0.25s;
+	transform: rotate(-15deg);
+}
+
+#LayerSelection .btn_tab:hover > iconify-icon,
+#LayerSelection .btn_tab.choosed > iconify-icon {
+	transform: scale(1.3) rotate(-25deg);
+}
+
+#LayerSelection .btn_tab.choosed {
+	border-left-width: 10px;
+	border-bottom-width: 2px;
+}
+
+.btn_tab.choosed {
+	border-bottom-width: 6px;
+}
+
+button {
+    border: solid 2px white;
+    background-color: #171717;
+	color: white;
+    font-size: 14px;
+	cursor: pointer;
+	transition-property: background-color, border, transform, box-shadow;
+	transition-duration: 0.15s;
+}
